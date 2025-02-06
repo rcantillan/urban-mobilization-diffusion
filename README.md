@@ -1,4 +1,4 @@
-# Urban Diffusion Dynamics
+# Urban mobilization diffusion
 
 This repository contains the data, scripts, and documentation for analyzing urban social mobilization and diffusion dynamics. It focuses on exploring network structures, coalition formation, and how diffusion processes drive contentious actions, as exemplified by the 2011 Peñalolén urban mobilization case.
 
