@@ -6,25 +6,25 @@ This repository contains the data, scripts, and documentation for analyzing urba
 
 urban-diffusion-dynamics/
 │
-├── README.md # Project overview, instructions, and repository structure
-├── LICENSE # License of the project (e.g., MIT License)
+├── README.md               # Project overview, instructions, and repository structure
+├── LICENSE                 # License of the project (e.g., MIT License)
 │
 ├── data/
-│ ├── raw/ # Original datasets (e.g., CSV files with network and attribute data)
-│ └── processed/ # Cleaned or transformed data used in the analysis
+│   ├── raw/                # Original datasets (e.g., CSV files with network and attribute data)
+│   └── processed/          # Cleaned or transformed data used in the analysis
 │
 ├── scripts/
-│ ├── data_preparation.R # Script for reading and preprocessing datasets
-│ ├── network_analysis.R # Script for descriptive network analysis and visualization
-│ ├── diffusion_analysis.R # Script dedicated to analyzing diffusion dynamics
-│ └── ergm_model.R # Script for constructing and evaluating ERGM models
+│   ├── data_preparation.R  # Script for reading and preprocessing datasets
+│   ├── network_analysis.R  # Script for descriptive network analysis and visualization
+│   ├── diffusion_analysis.R# Script dedicated to analyzing diffusion dynamics
+│   └── ergm_model.R        # Script for constructing and evaluating ERGM models
 │
 ├── notebooks/
-│ └── exploratory_analysis.Rmd # R Markdown notebook for exploratory and reproducible analysis
+│   └── exploratory_analysis.Rmd  # R Markdown notebook for exploratory and reproducible analysis
 │
 └── docs/
-├── repository_structure.md # Additional documentation of project structure and methodology
-└── overleaf_project_link.txt # File containing the link and connection details to the Overleaf document
+    ├── repository_structure.md   # Additional documentation of project structure and methodology
+    └── overleaf_project_link.txt   # File containing the link and connection details to the Overleaf document
 
 
 ## Overleaf Documentation
