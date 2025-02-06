@@ -1,0 +1,71 @@
+Id,Nombre,Tipo,1PosciónCONCOR,Tipo_de_organización,Ubicación ,Orientación  ,Repertorios,NumRep,NumOrient,NrmInDeg,Normalized Beta Cent,nFlowBet,nBetweenness
+1,CD_AvanceDeCarvallo,6,1, Club deportivo , La Faena ,No_conflictiva,Contenidos,0,0,1.44927537441254,0.000146736667375,0,0
+2,CD_CristoJovén,6,1, Club deportivo , Lo Hermida ,No_conflictiva,Contenidos,0,0,1.44927537441254,0.065951906144619,0,0
+3,CD_RealHéroes,6,3, Club deportivo , Lo Hermida ,No_conflictiva,Contenidos,0,0,1.44927537441254,0.000890494557098,0,0
+4,CD_SanLuisDelElqui,6,2, Club deportivo , San Luis ,No_conflictiva,Contenidos,0,0,0,0,0,0
+5,CV_BrillaElSol,2,1, Comité de vivienda , Esperanza Andina ,Conflictiva,Transgresivos,1,1,8.69565200805664,0.469955593347549,6.98070383071899,3.65135192871094
+6,CV_CaminoALaVictoria,2,2, Comité de vivienda , Peñalolén Alto ,No_conflictiva,Transgresivos,1,0,1.44927537441254,0.0048379865475,0,0
+7,CV_CasaDigna,2,2, Comité de vivienda , Peñalolén Alto ,No_conflictiva,Contenidos,0,0,1.44927537441254,0.0048379865475,0,0
+8,CV_CoordAllegados,2,1, Comité de vivienda , Lo Hermida ,Conflictiva,Transgresivos,1,1,2.89855074882507,0.148926958441734,0,0
+9,CV_LosColgados,2,1, Comité de vivienda , Lo Hermida ,Conflictiva,Transgresivos,1,1,4.34782600402832,0.269347906112671,20.5965118408203,7.11418628692627
+10,CV_PasoSeguro,2,2, Comité de vivienda , Peñalolén Alto ,No_conflictiva,Contenidos,0,0,1.44927537441254,0.0048379865475,0,0
+11,CV_PorUnaVidaMejor,2,2, Comité de vivienda , Lo Hermida ,No_conflictiva,Transgresivos,1,0,1.44927537441254,0.0048379865475,0,0
+12,CV_UnaEsperanzaEnElFuturo,2,2, Comité de vivienda , Peñalolén Alto ,No_conflictiva,Transgresivos,1,0,1.44927537441254,0.0048379865475,0,0
+13,CV_volverAEmpezar,2,1, Comité de vivienda , Peñalolén Alto ,Conflictiva,Transgresivos,1,1,4.34782600402832,0.246821224689484,4.22059631347656,0.103012219071388
+14,Gob_Mun,7,2,Otros, Peñalolén Alto ,No_conflictiva,Contenidos,0,0,1.44927537441254,0.019201811403036,8.09185314178467,3.36743402481079
+15,OC_ ClubCientífico,5,3, Organización cultural , Peñalolén Alto ,No_conflictiva,Contenidos,0,0,1.44927537441254,0.000834184815176,0,0
+16,OC_Barracón,5,4, Organización cultural , Lo Hermida ,No_conflictiva,Transgresivos,1,0,1.44927537441254,0.002813802333549,3.63436126708984,1.02657008171082
+17,OC_CircoChino,5,3, Organización cultural , Lo Hermida ,No_conflictiva,Contenidos,0,0,2.89855074882507,0.002865807153285,5.38548755645752,1.14023876190186
+18,OC_EncuentroAndino,5,3, Organización cultural , Lo Hermida ,No_conflictiva,Contenidos,0,0,2.89855074882507,0.002809497527778,0,0
+19,OC_GenteDelSur,5,3, Organización cultural , Lo Hermida ,No_conflictiva,Contenidos,0,0,1.44927537441254,0.000364295963664,0,0
+20,OC_ManzoPiño,5,4, Organización cultural , Lo Hermida ,No_conflictiva,Contenidos,0,0,2.89855074882507,0.004649204667658,3.6051025390625,1.27877235412598
+21,OC_Murgarte,5,4, Organización cultural , Lo Hermida ,No_conflictiva,Transgresivos,1,0,7.24637699127197,0.00983686838299,4.62065029144287,1.48860263824463
+22,OC_PasiónPorMiTierra,5,3, Organización cultural , Lo Hermida ,No_conflictiva,Contenidos,0,0,2.89855074882507,0.001254790462554,0,0
+23,OC_PorLaMemoriaHistórica,5,3, Organización cultural , Lo Hermida ,Conflictiva,Transgresivos,1,1,1.44927537441254,0.000834184815176,0,0
+24,OC_RadioEncuentro(tv8),5,4, Organización cultural , Lo Hermida ,Conflictiva,Transgresivos,1,1,1.44927537441254,0.002813802333549,0,0
+25,OC_RAP,5,4, Organización cultural , Lo Hermida ,Conflictiva,Transgresivos,1,1,8.69565200805664,0.009572342038155,5.44412612915039,1.7666848897934
+26,OC_Yanawara,5,4, Organización cultural , Lo Hermida ,No_conflictiva,Contenidos,0,0,1.44927537441254,0.002813802333549,0,0
+27,OG_ColegioDeArquitectos,7,2,Otros,Santiago,No_conflictiva,Contenidos,0,0,2.89855074882507,0.026406481862068,0.05464480817318,0
+28,ONG_DefendamosLaCiudad,7,2,Otros,Santiago,No_conflictiva,Contenidos,0,0,4.34782600402832,0.028888905420899,2.78993439674377,1.25745952129364
+29,ONG_PACc,7,2,Otros,Santiago,No_conflictiva,Contenidos,0,0,2.89855074882507,0.012042655609548,0.218579232692719,0.010656436905265
+30,OP_AsociaciónMicrobuseros,7,2,Otros, Peñalolén Alto ,Conflictiva,Transgresivos,1,1,1.44927537441254,0.019201811403036,0,0
+31,OPB_AlexLemún,4,4, Organización política de base , Lo Hermida ,Conflictiva,Transgresivos,1,1,7.24637699127197,0.007991627790034,5.32646036148071,4.22933673858643
+32,OPB_CristoJoven,4,3, Organización política de base , Lo Hermida ,Conflictiva,Transgresivos,1,1,5.79710149765015,0.003044284181669,11.4010210037231,2.4205334186554
+33,OPB_GrfemAuto,4,4, Organización política de base , Lo Hermida ,Conflictiva,Transgresivos,1,1,1.44927537441254,0.002813802333549,0.73115861415863,0.007104291114956
+34,OPB_OCAP,4,4, Organización política de base , Lo Hermida ,Conflictiva,Transgresivos,1,1,10.1449279785156,0.010916599072516,10.7736387252808,2.87596917152405
+35,OPB_RecupHermida,4,4, Organización política de base , Lo Hermida ,Conflictiva,Transgresivos,1,1,4.34782600402832,0.006133370567113,1.99203193187714,1.12653756141663
+36,OPB_RIP,4,4, Organización política de base , Lo Hermida ,No_conflictiva,Transgresivos,1,0,7.24637699127197,0.007484566420317,18.3266925811768,4.66675806045532
+37,OPP_FENAPO,3,1, Organización política de pobladores ,Chile,Conflictiva,Transgresivos,1,1,2.89855074882507,0.189170330762863,1.04856514930725,0
+38,OPP_MPL,3,1, Organización política de pobladores , La Faena ,Conflictiva,Transgresivos,1,1,18.8405799865723,0.491533160209656,41.6714057922363,10.0979881286621
+39,OPP_MPLD,3,1, Organización política de pobladores ,Argentina,Conflictiva,Transgresivos,1,1,1.44927537441254,0.120234608650208,0,0
+40,OPP_MPST,3,1, Organización política de pobladores , San Luis ,Conflictiva,Transgresivos,1,1,4.34782600402832,0.269161552190781,3.43661975860596,2.29443216323853
+41,OPP_MUA,3,1, Organización política de pobladores , San Luis ,Conflictiva,Transgresivos,1,1,5.79710149765015,0.361552238464355,3.91156458854675,2.58926033973694
+42,OPP_PIgualdad,3,1, Organización política de pobladores ,Santiago,Conflictiva,Transgresivos,1,1,4.34782600402832,0.28156104683876,3.58543419837952,0.500852525234222
+43,OV_AP_LosJardinesDeVespucio,1,2, Organización vecinal , San Luis ,No_conflictiva,Contenidos,0,0,0,0,0,0
+44,OV_CD_ReactivaciónEnMasas,1,3, Organización vecinal , Lo Hermida ,Conflictiva,Transgresivos,1,1,1.44927537441254,0.000834184815176,0,0
+45,OV_CD_VillaSolNaciente,1,2, Organización vecinal , Peñalolén Alto ,No_conflictiva,Contenidos,0,0,0,0,0,0
+46,OV_ComSeguridadSM,1,3, Organización vecinal , Lo Hermida ,No_conflictiva,Contenidos,0,0,2.89855074882507,0.001833097892813,0,0
+47,OV_CVD_VillaAlboradaNuevaPalena,1,2, Organización vecinal , Peñalolén Alto ,No_conflictiva,Contenidos,0,0,0,0,0,0
+48,OV_JI_ManosyNaturaleza,1,4, Organización vecinal , La Faena ,No_conflictiva,Contenidos,0,0,1.44927537441254,0.000146736667375,0,0
+49,OV_JJVV_ComunidadEcológica,1,2, Organización vecinal , Nuevo Peñalolén ,Conflictiva,Transgresivos,1,1,4.34782600402832,0.07799456268549,19.7483596801758,7.55541324615479
+50,OV_JJVV_CordilleraNevada,1,2, Organización vecinal , Peñalolén Alto ,No_conflictiva,Contenidos,0,0,0,0,0,0
+51,OV_JJVV_LaCordillera,1,2, Organización vecinal , San Luis ,No_conflictiva,Contenidos,0,0,0,0,0,0
+52,OV_JJVV_n°11_LaFaena,1,4, Organización vecinal , La Faena ,No_conflictiva,Contenidos,0,0,1.44927537441254,0.00128259730991,0,0
+53,OV_JJVV_n°12_LaFaena,1,4, Organización vecinal , La Faena ,No_conflictiva,Contenidos,0,0,1.44927537441254,0.00128259730991,0,0
+54,OV_JJVV_n°14_Parque1,1,4, Organización vecinal , La Faena ,No_conflictiva,Contenidos,0,0,1.44927537441254,0.00128259730991,0,0
+55,OV_JJVV_n°17_IsabelRiquelme,1,3, Organización vecinal , Lo Hermida ,No_conflictiva,Contenidos,0,0,1.44927537441254,0.000890494557098,0,0
+56,OV_JJVV_n°18,1,4, Organización vecinal , Lo Hermida ,No_conflictiva,Transgresivos,1,0,2.89855074882507,0.004130581393838,4.77815723419189,1.06818091869354
+57,OV_JJVV_n°19_Bolivar,1,3, Organización vecinal , Lo Hermida ,Conflictiva,Transgresivos,1,1,5.79710149765015,0.003044284181669,7.25623559951782,2.0983030796051
+58,OV_JJVV_n°19_Heroes,1,3, Organización vecinal , Lo Hermida ,No_conflictiva,Transgresivos,1,0,5.79710149765015,0.003257571719587,4.67869234085083,1.0235253572464
+59,OV_JJVV_n°29_LoHerAlto,1,1, Organización vecinal , Lo Hermida ,Conflictiva,Transgresivos,1,1,2.89855074882507,0.067107796669006,0,0
+60,OV_JJVV_PortalDelSol,1,2, Organización vecinal , Peñalolén Alto ,Conflictiva,Contenidos,0,1,1.44927537441254,0.019201811403036,0,0
+61,OV_JJVV_SanJudasTadeo,1,1, Organización vecinal , Peñalolén Alto ,Conflictiva,Transgresivos,1,1,2.89855074882507,0.175411283969879,0,0
+62,OV_JJVV_VillaCousiño,1,4, Organización vecinal , Lo Hermida ,Conflictiva,Transgresivos,1,1,1.44927537441254,0.00128259730991,0,0
+63,OV_JJVV_VillaElTorreón,1,2, Organización vecinal , San Luis ,Conflictiva,Contenidos,0,1,0,0,0,0
+64,OV_JJVV_VillaEsmeralda,1,2, Organización vecinal , Peñalolén Alto ,No_conflictiva,Contenidos,0,0,0,0,0,0
+65,OV_JJVV_VillaLautaro,1,1, Organización vecinal , La Faena ,No_conflictiva,Contenidos,0,0,0,0,0,0
+66,OV_JJVV_VillaNuevaPalena,1,2, Organización vecinal , Peñalolén Alto ,No_conflictiva,Contenidos,0,0,0,0,0,0
+67,OV_MesaSimónBolivar,1,3, Organización vecinal , Peñalolén Alto ,Conflictiva,Contenidos,0,1,1.44927537441254,0.000890494557098,1.96518814563751,0.330349534749985
+68,OV_MuchachosAlegres,1,1, Organización vecinal , Peñalolén Alto ,No_conflictiva,Contenidos,0,0,1.44927537441254,0.000146736667375,0,0
+69,OV_TL_LosAñumka,1,2, Organización vecinal , Peñalolén Alto ,No_conflictiva,Contenidos,0,0,0,0,0,0
+70,OC_Trafikarte,5,4, Organización cultural , Lo Hermida ,Conflictiva,Transgresivos,1,1,0,-7.92E-19,0,0
