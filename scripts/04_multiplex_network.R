@@ -177,7 +177,7 @@ for(k in 1:nrow(edges_intralayer)) {
   
   # >>> AQUI: COLOR, ANCHO Y TRANSPARENCIA DE ARISTAS INTRA (negro)
   edge_color <- "black"
-  edge_width <- 1.5
+  edge_width <- 1.8
   edge_alpha <- 0.8  # no transparency
   
   p <- p %>%
@@ -204,7 +204,7 @@ for(k in 1:nrow(edges_interlayer)) {
   coords_to   <- subset(df_nodes_all, node_id==t_id & layer==t_layer)
   
   # >>> AQUI: COLOR, ANCHO Y TRANSPARENCIA DE ARISTAS INTER (rosa)
-  edge_color <- "#ffcd80"
+  edge_color <- "red"
   edge_width <- 1
   edge_alpha <- 0.5  # no transparency
   
@@ -214,7 +214,7 @@ for(k in 1:nrow(edges_interlayer)) {
       y = c(coords_from$y, coords_to$y, NA),
       z = c(coords_from$z, coords_to$z, NA),
       mode="lines",
-      line=list(color=edge_color, width=edge_width, dash="dot"),
+      line=list(color=edge_color, width=edge_width, dash="solid"),
       opacity=edge_alpha,
       hoverinfo="none",
       showlegend=FALSE
@@ -238,7 +238,7 @@ p <- p %>% layout(
   annotations = list(
     x = 1,  # posición en el plano
     y = 0,  # posición en el plano
-    #text = footnote_text,
+    text = "",
     xref = "paper",
     yref = "paper",
     showarrow = FALSE,
