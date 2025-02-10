@@ -1,0 +1,11 @@
+"Layer1","Layer2","Overlap","Jaccard","Correlation"
+"Cooperation","Trust",118,0.792,0.882
+"Cooperation","Resources",93,0.646,0.795
+"Cooperation","Values",131,0.929,0.963
+"Cooperation","Kinship",38,0.255,0.464
+"Trust","Resources",92,0.708,0.833
+"Trust","Values",108,0.725,0.836
+"Trust","Kinship",44,0.344,0.572
+"Resources","Values",88,0.633,0.78
+"Resources","Kinship",33,0.303,0.49
+"Values","Kinship",38,0.273,0.482

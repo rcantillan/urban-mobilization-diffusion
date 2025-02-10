@@ -326,27 +326,186 @@ kbl(com_stats, format="latex", booktabs=TRUE,
   print()
 
 
-###############################################################################
-# (6) Otras estadísticas en 'multinet'
-###############################################################################
-cat("\n*** Estadísticas adicionales en multinet ***\n")
-num_actors_total   <- num_actors_ml(net_ml)
-num_layers_total   <- num_layers_ml(net_ml)
-num_vertices_total <- num_vertices_ml(net_ml)
-num_edges_total    <- num_edges_ml(net_ml)
 
-network_summary <- data.frame(
-  Indicador = c("Total actores", "Total capas", "Suma de vértices", "Suma de aristas"),
-  Valor = c(num_actors_total, num_layers_total, num_vertices_total, num_edges_total)
+
+
+
+calc_community_stats <- function(net, comm_df, method_name) {
+  cat("\nAnalizando estadísticas para método:", method_name, "\n")
+  
+  # Primero verificamos que tenemos datos válidos
+  if(is.null(comm_df) || !is.data.frame(comm_df)) {
+    cat("Error: Datos inválidos para", method_name, "\n")
+    return(NULL)
+  }
+  
+  # Protegemos cada cálculo en su propio bloque tryCatch
+  tryCatch({
+    # 1. Estadísticas básicas de la red
+    # Obtenemos el número total de vértices y actores de manera robusta
+    all_vertices <- vertices_ml(net)
+    all_verts <- nrow(all_vertices)
+    total_actors <- length(unique(comm_df$actor))
+    
+    # 2. Número de comunidades
+    ncom <- length(unique(comm_df$cid))
+    cat("Número de comunidades:", ncom, "\n")
+    
+    # 3. Vértices asignados (contamos pares actor-layer únicos)
+    assigned_vertices <- unique(paste(comm_df$actor, comm_df$layer))
+    assigned_verts <- length(assigned_vertices)
+    cat("Vértices asignados:", assigned_verts, "\n")
+    
+    # 4. Actores asignados
+    assigned_actors <- length(unique(comm_df$actor))
+    cat("Actores asignados:", assigned_actors, "\n")
+    
+    # 5. Calculamos las métricas finales con protección contra división por cero
+    avg_size <- ifelse(ncom > 0, assigned_verts/ncom, 0)
+    clust_vertices <- ifelse(all_verts > 0, assigned_verts/all_verts, 0)
+    clust_actors <- ifelse(total_actors > 0, assigned_actors/total_actors, 0)
+    
+    # 6. Calculamos el nivel de superposición
+    actor_comm_pairs <- nrow(unique(comm_df[,c("actor", "cid")]))
+    actor_overl <- ifelse(assigned_actors > 0, actor_comm_pairs/assigned_actors, 0)
+    
+    # 7. Creamos el data.frame resultado
+    result <- data.frame(
+      num = ncom,
+      avg_s = avg_size,
+      clust_vertices = clust_vertices, 
+      clust_actors = clust_actors,
+      actor_overl = actor_overl,
+      row.names = method_name,
+      stringsAsFactors = FALSE
+    )
+    
+    cat("Estadísticas calculadas exitosamente\n")
+    return(result)
+    
+  }, error = function(e) {
+    cat("Error en cálculos:", conditionMessage(e), "\n")
+    # Retornamos un data.frame con valores por defecto en caso de error
+    return(data.frame(
+      num = 0,
+      avg_s = 0,
+      clust_vertices = 0,
+      clust_actors = 0,
+      actor_overl = 0,
+      row.names = method_name,
+      stringsAsFactors = FALSE
+    ))
+  })
+}
+
+# Cargar librerías necesarias
+suppressMessages({
+  library(multinet)
+})
+
+# Cargar la red de ejemplo AUCS que viene con el paquete
+net <- ml_aucs()
+
+# Ejecutar los diferentes métodos de detección de comunidades
+c1 <- abacus_ml(net, 4, 2)
+c2 <- clique_percolation_ml(net, 4, 2) 
+c3 <- glouvain_ml(net)
+c4 <- infomap_ml(net)
+
+# Definir la función corregida para calcular estadísticas
+calc_community_stats <- function(net, comm_df, method_name) {
+  cat("\nAnalizando estadísticas para método:", method_name, "\n")
+  
+  # Verificación inicial de datos
+  if(is.null(comm_df) || !is.data.frame(comm_df)) {
+    cat("Error: Datos inválidos para", method_name, "\n")
+    return(NULL)
+  }
+  
+  tryCatch({
+    # Estadísticas básicas de la red
+    all_vertices <- vertices_ml(net)
+    all_verts <- nrow(all_vertices)
+    total_actors <- length(unique(comm_df$actor))
+    
+    # Número de comunidades
+    ncom <- length(unique(comm_df$cid))
+    cat("Número de comunidades:", ncom, "\n")
+    
+    # Vértices asignados
+    assigned_vertices <- unique(paste(comm_df$actor, comm_df$layer))
+    assigned_verts <- length(assigned_vertices)
+    cat("Vértices asignados:", assigned_verts, "\n")
+    
+    # Actores asignados
+    assigned_actors <- length(unique(comm_df$actor))
+    cat("Actores asignados:", assigned_actors, "\n")
+    
+    # Métricas finales
+    avg_size <- ifelse(ncom > 0, assigned_verts/ncom, 0)
+    clust_vertices <- ifelse(all_verts > 0, assigned_verts/all_verts, 0)
+    clust_actors <- ifelse(total_actors > 0, assigned_actors/total_actors, 0)
+    
+    # Nivel de superposición
+    actor_comm_pairs <- nrow(unique(comm_df[,c("actor", "cid")]))
+    actor_overl <- ifelse(assigned_actors > 0, actor_comm_pairs/assigned_actors, 0)
+    
+    # Crear data.frame resultado
+    result <- data.frame(
+      num = ncom,
+      avg_s = avg_size,
+      clust_vertices = clust_vertices, 
+      clust_actors = clust_actors,
+      actor_overl = actor_overl,
+      row.names = method_name,
+      stringsAsFactors = FALSE
+    )
+    
+    cat("Estadísticas calculadas exitosamente\n")
+    return(result)
+    
+  }, error = function(e) {
+    cat("Error en cálculos:", conditionMessage(e), "\n")
+    return(data.frame(
+      num = 0,
+      avg_s = 0,
+      clust_vertices = 0,
+      clust_actors = 0,
+      actor_overl = 0,
+      row.names = method_name,
+      stringsAsFactors = FALSE
+    ))
+  })
+}
+
+# Calcular las estadísticas para cada método
+results_list <- list()
+
+# Lista de métodos y sus resultados
+methods <- list(
+  abacus = c1,
+  clique = c2,
+  louvain = c3,
+  infomap = c4
 )
 
-kbl(network_summary, format="latex", booktabs=TRUE,
-    caption="Resumen básico de la red multiplex (multinet)") %>%
-  kable_styling(latex_options="HOLD_position") %>%
-  print()
+# Procesar cada método
+for(met in names(methods)) {
+  cat("\n=== Procesando método:", met, "===\n")
+  tmp_stats <- calc_community_stats(net, methods[[met]], met)
+  if(!is.null(tmp_stats)) {
+    results_list[[met]] <- tmp_stats
+  }
+}
 
-cat("\nProceso finalizado.\n")
-
+# Combinar resultados
+if(length(results_list) > 0) {
+  com_stats <- do.call(rbind, results_list)
+  cat("\n=== Resumen final de estadísticas ===\n")
+  print(com_stats)
+} else {
+  warning("No se pudieron calcular estadísticas para ningún método.")
+}
 #######################################################
 # (Opcional) Descripción adicional de comunidades
 #######################################################

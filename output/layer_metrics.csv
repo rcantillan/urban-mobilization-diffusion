@@ -1,0 +1,6 @@
+"Layer","Density","AvgDegree","Reciprocity","Clustering","Components","MeanDistance"
+"Cooperation",0.029,4.03,0.44,0.343,11,3.43
+"Trust",0.026,3.6,0.349,0.381,15,3.63
+"Resources",0.02,2.74,0.229,0.26,18,3.5
+"Values",0.027,3.74,0.443,0.331,12,3.75
+"Kinship",0.01,1.31,0.304,0.255,41,3.22
